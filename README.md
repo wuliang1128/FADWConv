@@ -1,8 +1,9 @@
 # FADWConv: A Frequency-Aware Dual-Gated Wavelet Convolution for Oracle Bone Inscription Detection
 Automated detection of oracle bone inscriptions (OBI) in scanned rubbings is hindered by crack textures, whose high-frequency components overlap with character strokes. Most spatial-domain models struggle to separate these overlapping frequency signals. Although Wavelet Transform Convolution (WTConv) introduces frequency analysis, its uniform scaling and fixed fusion fail to distinguish structure-bearing low frequencies from crack-induced high frequencies. We propose FADWConv, a frequency-aware dual-gated wavelet convolution comprising a spatial branch and a wavelet branch. The wavelet branch incorporates a subband attention (SBA) module and independent per-channel scaling for low- and high-frequency groups. A spatial gate and a channel gate then fuse these two branches at pixel and channel levels. Integrated into YOLOv8m, FADWConv improves precision from 91\% to 94.9\% and mAP@0.5 from 84.7\% to 86.1\% on OBCD. On OBIMD, it raises precision from 87.7\% to 89.0\% and mAP@0.5 from 85.2\% to 86.6\%. As a plug-and-play module, it also consistently improves accuracy in detectors including YOLOv11m, YOLO26m/n, and OracleDet.
 
-In this study, we propose **FADG-WTConv**, a frequency-aware dual-gated wavelet convolution module, and incorporate it into YOLOv8m and YOLO26 for Oracle Bone Inscription (OBI) detection. In this repository, we provide the complete evolution of our module design (v1 to v4) and the corresponding training/validation scripts.
+In this study, we propose **FADWConv**, a frequency-aware dual-gated wavelet convolution module, and incorporate it into YOLOv8m and YOLO26 for Oracle Bone Inscription (OBI) detection. In this repository, we provide the complete evolution of our module design (v1 to v4) and the corresponding training/validation scripts.
 
+***Note: The original name was FADG-WTConv, which was subsequently changed to FADWConv.*
 ## Repository Structure
 
 We provide two independent integration pipelines to ensure reproducibility. The core module versions are organized separately.
